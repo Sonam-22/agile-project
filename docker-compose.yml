@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  db:
+    image: mysql:8.0.35
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: agileproject1
+      MYSQL_USER: agile_admin
+      MYSQL_PASSWORD: agile@password
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    volumes:
+      - ~/docker-data/mysql:/var/lib/mysql
